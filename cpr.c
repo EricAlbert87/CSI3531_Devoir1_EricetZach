@@ -12,10 +12,14 @@ Description: Ce programme contient le code pour la creation
 Explication du processus zombie
 (point 5 de "A completer" dans le devoir):
 
-Un processus zombie est un programme dont l'exécution est terminée, mais qui reste visible dans le système parce que son 
-« parent » (le programme qui l'a lancé) n'a pas encore récupéré les informations relatives à sa terminaison. Dans ce programme, 
-les parents ne demandent pas immédiatement ce qu'il est arrivé à leurs enfants une fois qu'ils ont terminé. En conséquent, les 
-enfants deviennent des zombies pendant un bref moment. Vous pouvez voir ces zombies avec la commande ps ou en regardant dans le dossier /proc.
+Un processus zombie est un programme dont l'exécution est terminée, 
+mais qui reste visible dans le système parce que son « parent » 
+(le programme qui l'a lancé) n'a pas encore récupéré les informations 
+relatives à sa terminaison. Dans ce programme, les parents ne demandent 
+pas immédiatement ce qu'il est arrivé à leurs enfants une fois qu'ils ont 
+terminé. En conséquent, les enfants deviennent des zombies pendant un bref 
+moment. Vous pouvez voir ces zombies avec la commande ps ou en regardant dans 
+le dossier /proc.
 
 Traduit avec DeepL.com (version gratuite)
 	(s.v.p. completez cette partie);
