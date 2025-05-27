@@ -1,8 +1,8 @@
 /*------------------------------------------------------------
 Fichier: cpr.c
 
-Nom: Zachary Shewan
-Numero d'etudiant: 300273108
+Nom: Zachary Shewan et Eric Albert
+Numero d'etudiant: 300273108 et 300353640
 
 Description: Ce programme contient le code pour la creation
              d'un processus enfant et y attacher un tuyau.
@@ -12,6 +12,12 @@ Description: Ce programme contient le code pour la creation
 Explication du processus zombie
 (point 5 de "A completer" dans le devoir):
 
+Un processus zombie est un programme dont l'exécution est terminée, mais qui reste visible dans le système parce que son 
+« parent » (le programme qui l'a lancé) n'a pas encore récupéré les informations relatives à sa terminaison. Dans ce programme, 
+les parents ne demandent pas immédiatement ce qu'il est arrivé à leurs enfants une fois qu'ils ont terminé. En conséquent, les 
+enfants deviennent des zombies pendant un bref moment. Vous pouvez voir ces zombies avec la commande ps ou en regardant dans le dossier /proc.
+
+Traduit avec DeepL.com (version gratuite)
 	(s.v.p. completez cette partie);
 
 -------------------------------------------------------------*/
@@ -103,9 +109,14 @@ void creerEnfantEtLire(int prcNum)
 		// Enfant
 		close(fd[0]); // close the read pipe
 
+		// Rediriger la sortie standard vers le tuyau
+		dup2(fd[1], 1);
+		close(fd[1]); // close the original write pipe
+
+
 		char msg[32];
         int len = snprintf(msg, sizeof(msg), "Processus %d commence\n", prcNum);
-        write(fd[1], msg, len);
+        write(1, msg, len);
 		// il ne faut pas fermer le tuyau pour obtenir les messages dans la bonne ordre
 		
 		// Recursion (exécute l'enfant)
