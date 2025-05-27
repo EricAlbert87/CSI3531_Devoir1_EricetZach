@@ -23,6 +23,11 @@ Traduit avec DeepL.com (version gratuite)
 -------------------------------------------------------------*/
 #include <stdio.h>
 #include <sys/select.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 /* Prototype */
 void creerEnfantEtLire(int );
