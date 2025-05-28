@@ -144,7 +144,7 @@ void creerEnfantEtLire(int prcNum)
 		int n;
 		// lecture des messages du tuyau
 		while ((n = read(fd[0], buffer, sizeof(buffer))) > 0) {
-			write(1, buffer, n); // this possibly writes to the stdout instead of passing it up the pipe chain
+			write(1, buffer, n);
 		}
 		close(fd[0]);
 
