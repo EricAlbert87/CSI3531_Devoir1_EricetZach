@@ -18,7 +18,7 @@ mais qui reste visible dans le système parce que son « parent »
 relatives à sa terminaison. Dans ce programme, les parents ne demandent 
 pas immédiatement ce qu'il est arrivé à leurs enfants une fois qu'ils ont 
 terminé. En conséquent, les enfants deviennent des zombies pendant un bref 
-moment. Vous pouvez voir ces zombies avec la commande ps ou en regardant dans 
+moment. On peut voir ces zombies avec la commande ps ou en regardant dans 
 le dossier /proc.
 
 Traduit avec DeepL.com (version gratuite)
